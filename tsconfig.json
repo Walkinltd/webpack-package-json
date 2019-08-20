@@ -4,9 +4,14 @@
     "strict": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "declaration": true
+    "declaration": true,
+    "outDir": "dist"
   },
   "files": [
     "index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
