@@ -10,6 +10,9 @@
   "author": "Jake Oliver <github@skos.ninja>",
   "homepage": "https://github.com/walkinltd/webpack-package-json",
   "repository": "https://github.com/walkinltd/webpack-package-json.git",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
   "license": "GPL-3.0",
   "scripts": {
     "build": "tsc",
