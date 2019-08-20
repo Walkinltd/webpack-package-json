@@ -1,0 +1,33 @@
+{
+  "name": "webpack-package-json",
+  "version": "0.0.1",
+  "description": "Will combine all dependencies into ",
+  "keywords": [
+    "webpack"
+  ],
+  "main": "index.js",
+  "types": "index.d.ts",
+  "author": "Jake Oliver <github@skos.ninja>",
+  "homepage": "https://github.com/skos-ninja/webpack-package-json",
+  "repository": "https://github.com/skos-ninja/webpack-package-json.git",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --version && tsc",
+    "test": "jest"
+  },
+  "dependencies": {
+    "find-up": "^4.1.0",
+    "semver": "^6.3.0",
+    "webpack-sources": "^1.4.3"
+  },
+  "peerDependencies": {
+    "webpack": "^4.32.2"
+  },
+  "devDependencies": {
+    "@types/semver": "^6.0.1",
+    "@types/webpack": "^4.4.22",
+    "@types/webpack-sources": "^0.1.5",
+    "typescript": "^3.0.3",
+    "webpack": "^4.39.2"
+  }
+}
