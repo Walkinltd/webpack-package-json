@@ -1,0 +1,33 @@
+name: Node.js Package
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: Borales/actions-yarn@1.1.0
+        with:
+          node-version: 12
+      - run: yarn build
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: Borales/actions-yarn@1.1.0
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: '@ywalkinltd'
+      - run: npm build
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
