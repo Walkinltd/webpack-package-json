@@ -7,11 +7,16 @@ interface Dependencies {
   [pkgName: string]: string
 }
 
+interface Engines {
+  [engine: string]: string
+}
+
 interface Options {
   name?: string;
   version?: string;
   main?: string;
   author?: string;
+  engines?: Engines;
 }
 
 interface Package {
@@ -19,7 +24,8 @@ interface Package {
   version?: string;
   main?: string;
   author?: string;
-  dependencies: Dependencies
+  dependencies: Dependencies;
+  engines: Engines;
 }
 
 class WebpackPackageJson {
@@ -38,7 +44,8 @@ class WebpackPackageJson {
         version: this.options.version || this.getVersion(compilation),
         main: this.options.main || '',
         author: this.options.author || '',
-        dependencies: {}
+        dependencies: {},
+        engines: this.options.engines || {},
       }
       
       // Loop through all the entrypoints and generate their package.json
