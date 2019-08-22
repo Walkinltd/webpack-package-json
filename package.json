@@ -1,6 +1,6 @@
 {
   "name": "@walkinltd/webpack-package-json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Will combine all dependencies into ",
   "keywords": [
     "webpack"
@@ -11,7 +11,7 @@
   "homepage": "https://github.com/walkinltd/webpack-package-json",
   "repository": "https://github.com/walkinltd/webpack-package-json.git",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "license": "GPL-3.0",
   "scripts": {
