@@ -16,6 +16,7 @@ jobs:
       - uses: Borales/actions-yarn@1.1.0
         with:
           node-version: 12
+      - run: yarn install
       - run: yarn build
 
   publish-gpr:
@@ -27,7 +28,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-          scope: '@ywalkinltd'
-      - run: npm build
+          scope: '@walkinltd'
+      - run: yarn install
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
